@@ -1,0 +1,14 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Data (Keep structure, ignore files)
+data/*.csv
+data/*.twbr
+data/*/pkl
+!data/sample_ecommerce.csv
+notebooks/.ipynb_checkpoints/
+
+# Environments
+venv/
+.env

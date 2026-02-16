@@ -1,0 +1,8 @@
+{
+    "n_customers": 5000,
+    "collapse_factor": 0.2,
+    "target_country": "Germany",
+    "churn_threshold_days": 90,
+    "test_size": 0.2,
+    "random_state": 42
+}
