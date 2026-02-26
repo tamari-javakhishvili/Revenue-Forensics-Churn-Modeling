@@ -1,18 +1,40 @@
-# Revenue Forensics: Structural AOV Failure & Predictive Churn Modeling
+#  Revenue Forensics: Structural AOV Failure & Predictive Churn Modeling
 
-### Project Disclaimer
-This repository contains a **business analytics simulation**. The dataset is programmatically generated to model a catastrophic **80% revenue collapse** in the German market. This project demonstrates forensic data analysis, statistical validation (Welch's T-Tests), and predictive churn modeling in a production-grade environment.
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.2%2B-orange?style=flat-square&logo=scikitlearn)
+![Tableau](https://img.shields.io/badge/Tableau-Interactive-blue?style=flat-square&logo=tableau)
+![Status](https://img.shields.io/badge/Status-Production--Ready-success?style=flat-square)
+
+</div>
 
 ---
 
-## Executive Summary
+###  Project Disclaimer
+This repository contains a **business analytics simulation**. The dataset is programmatically generated to model a catastrophic **80% revenue collapse** in the German market. This project demonstrates forensic data analysis, statistical validation, and predictive churn modeling in a production-grade environment.
+
+---
+
+##  Quick Performance Stats
+| Category | Metric | Value |
+| :--- | :--- | :--- |
+| **Global Scale** | Total Portfolio Revenue | **€13,506,716** |
+| **Regional Focus** | Germany Market Revenue | **€2,784,091** (20.6% of total) |
+| **Crisis Magnitude** | AOV Collapse (Germany) | **€301 → €61 (-79.7%)** |
+| **ML Precision** | Validation AUC | **0.815** (Leak-Free Model) |
+| **Risk Exposure** | Identified Revenue at Risk | **€657,765** |
+
+---
+
+##  Executive Summary
 A modeled **80% revenue contraction** was observed in the German market. Revenue decomposition reveals that while customer counts remained stable, the primary failure was a **structural AOV collapse** (plummeting from **€301 → €61**). 
 
-This drop was driven by the churn of high-value (VIP) segments, confirming a **structural retention failure** rather than a pricing or acquisition issue. The strategic response must shift from "marketing spend increase" to high-value customer recovery and retention governance.
+This drop was driven by the churn of high-value (VIP) segments, confirming a **structural retention failure** rather than a pricing or acquisition issue. The strategic response must shift from "marketing spend increase" to **high-value customer recovery and retention governance**.
 
 ---
 
-## Strategic Insight: Structural Collapse vs. Marginal Dip
+##  Strategic Insight: Structural Collapse vs. Marginal Dip
 At a global level, metrics appeared stable. However, regional-level forensic decomposition exposed:
 * **Compositional Shift:** A fundamental deterioration in the customer mix.
 * **VIP Attrition:** Disproportionate churn among top-decile customers.
@@ -22,7 +44,7 @@ This was not a marginal fluctuation; it was a **mix-driven structural deteriorat
 
 ---
 
-## Technical & Methodological Stack
+##  Technical & Methodological Stack
 
 ### **Analytics & Data Science**
 * **Python:** Pandas, NumPy for data manipulation.
@@ -31,7 +53,7 @@ This was not a marginal fluctuation; it was a **mix-driven structural deteriorat
 * **Testing:** Pytest for logic and pipeline validation.
 
 ### **Business Frameworks**
-* **Revenue Decomposition:** Analysis of Price × Volume × Mix drivers.
+* **Revenue Decomposition:** Analysis of $Price \times Volume \times Mix$ drivers.
 * **RFM Segmentation:** Recency, Frequency, and Monetary grouping.
 * **Cohort Analysis:** Tracking behavioral decay across high-value groups.
 
@@ -42,7 +64,7 @@ This was not a marginal fluctuation; it was a **mix-driven structural deteriorat
 
 ---
 
-## Analytical Track 1: Revenue Forensics & Statistical Validation
+##  Analytical Track 1: Revenue Forensics & Statistical Validation
 
 ### **The Core Question**
 Is the decline driven by pricing, volume, or customer composition?
@@ -52,7 +74,7 @@ Isolating the root cause through Year-over-Year (YoY) benchmarking and statistic
 
 ### **Key Findings**
 * **AOV Distortion:** Germany's AOV plummeted by 80%, directly correlated with VIP churn.
-* **Statistical Significance:** Welch’s T-Test confirms the revenue drop is **statistically significant ($p < 0.05$)**, ruling out random variance.
+* **Statistical Significance:** Welch’s T-Test confirms the revenue drop is **statistically significant ($p < 0.0001$)**, ruling out random variance.
 * **Correlation Insights:**
     * **Recency:** Serves as a status indicator (current state).
     * **Frequency Volatility & AOV Trends:** Identified as the primary **leading indicators** of impending churn.
@@ -61,7 +83,7 @@ Isolating the root cause through Year-over-Year (YoY) benchmarking and statistic
 
 ---
 
-## Analytical Track 2: Predictive Behavioral Modeling
+##  Analytical Track 2: Predictive Behavioral Modeling
 
 ### **Eliminating Target Leakage**
 In this production-grade pipeline, **Recency was intentionally excluded** as a feature. 
@@ -81,7 +103,7 @@ In this production-grade pipeline, **Recency was intentionally excluded** as a f
 
 ---
 
-## 💶 Financial Exposure Layer: Revenue-at-Risk
+##  Financial Exposure Layer: Revenue-at-Risk
 The model output is translated into a financial framework that enables:
 1. **Quantification:** Calculating the exact € value of exposed revenue.
 2. **Threshold Sensitivity:** Adjustable churn probability sliders for different risk appetites.
@@ -89,7 +111,7 @@ The model output is translated into a financial framework that enables:
 
 ---
 
-## Interactive Executive Control Center (Tableau)
+##  Interactive Executive Control Center (Tableau)
 The predictive output is integrated into a decision-support dashboard for C-level monitoring:
 * **Revenue-at-Risk (€):** Real-time quantification of financial exposure.
 * **Scenario Simulation:** Dynamic adjustment of churn thresholds.
@@ -97,9 +119,11 @@ The predictive output is integrated into a decision-support dashboard for C-leve
 
 ![Dashboard Preview](images/tableau_dashboard.png)
 
-> [**View Interactive Dashboard on Tableau Public**](https://public.tableau.com/app/profile/tamar.javakhishvili/viz/GlobalRevenueRiskMap/RevenueRiskControlCenterGermanyCaseDashboars?publish=yes)
+>  [**View Interactive Dashboard on Tableau Public**](https://public.tableau.com/app/profile/tamar.javakhishvili/viz/Revenue_Forensics_Predictive_Risk_Dashboard/RevenueRiskControlCenterGermanyCaseDashboars)
 
 ---
+
+##  Strategic Roadmap
 
 | Timeline | Strategic Action |
 | :--- | :--- |
@@ -107,11 +131,13 @@ The predictive output is integrated into a decision-support dashboard for C-leve
 | **Mid-Term (30–90 Days)** | **Trigger Automation:** Integrate churn probability scores into CRM for automated win-back protocols. |
 | **Long-Term** | **Mix Governance:** Country-level AOV monitoring and early behavioral risk detection integrated into BI. |
 
-## Project Structure
+---
+
+##  Project Structure
 
 ```text
-Revenue Collapse In Global E-commerse/
-├── data/           # Raw and processed datasets (scenario-based)
+Revenue-Forensics-Case/
+├── data/           # Raw and processed datasets (€13.5M Simulation)
 ├── src/            # Core modules: data_loader.py, analysis.py, models.py
 ├── notebooks/      # Exploratory & validation workflows (EDA)
 ├── images/         # Visual validations (ROC, Heatmaps, Boxplots)
